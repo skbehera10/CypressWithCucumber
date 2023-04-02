@@ -1,0 +1,93 @@
+[
+  {
+    "description": "As a User I want to seach available jobs",
+    "keyword": "Feature",
+    "name": "Perform Job search",
+    "line": 1,
+    "id": "perform-job-search",
+    "tags": [],
+    "uri": "reedcouk.feature",
+    "elements": [
+      {
+        "id": "perform-job-search;search-engineer-jobs-under-financial-services",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Search Engineer Jobs under Financial Services",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open reed.co.uk",
+            "result": {
+              "status": "passed",
+              "duration": 52322000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I enter \"Engineer\" in what Text Field",
+            "result": {
+              "status": "passed",
+              "duration": 10881000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I enter \"South West London\" in where text Field",
+            "result": {
+              "status": "passed",
+              "duration": 1845000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click on Search button",
+            "result": {
+              "status": "passed",
+              "duration": 21734000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "Randomly 5 selected results should contain the \"Engineer\" in the search result page headings",
+            "result": {
+              "status": "passed",
+              "duration": 1446000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I selected the Financial Services checkbox",
+            "result": {
+              "status": "failed",
+              "duration": 1228000000,
+              "error_message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n    at mouseAction (https://www.reed.co.uk/__cypress/runner/cypress_runner.js:156686:76)\n    at Context.click (https://www.reed.co.uk/__cypress/runner/cypress_runner.js:156865:14)\n    at Context.<anonymous> (https://www.reed.co.uk/__cypress/runner/cypress_runner.js:178437:19)\nFrom Your Spec Code:\n    at SearchResultPage.SelectFinacialService (https://www.reed.co.uk/__cypress/tests?p=cypress\\integration\\Features\\reedcouk.feature:72:42)\n    at Context.eval (https://www.reed.co.uk/__cypress/tests?p=cypress\\integration\\Features\\reedcouk.feature:216:20)\n    at Context.resolveAndRunStepDefinition (https://www.reed.co.uk/__cypress/tests?p=cypress\\integration\\Features\\reedcouk.feature:10704:29)\n    at Context.eval (https://www.reed.co.uk/__cypress/tests?p=cypress\\integration\\Features\\reedcouk.feature:10025:35)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "The number next to the filter should be equal to the total jobs count after the filter is applied",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

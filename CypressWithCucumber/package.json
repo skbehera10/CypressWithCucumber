@@ -1,0 +1,35 @@
+{
+  "name": "reed.co.uk",
+  "version": "1.0.0",
+  "description": "Automation of Reed.co.uk Job search",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "delete:reports": "rm -rf cypress/report/* && rm -rf mochawesome.json && rm -rf target",
+    "pretest": "npm run delete:reports",
+    "posttest": "npm run report-merge && npm run marge"
+  },
+  "keywords": [
+    "Cypress",
+    "Cucumber",
+    "BDD"
+  ],
+  "author": "Santosh Kumar Behera",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^3.3.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/integration/stepDefinitions/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
