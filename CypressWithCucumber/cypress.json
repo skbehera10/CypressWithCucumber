@@ -1,7 +1,6 @@
 { "baseUrl" : "https://www.reed.co.uk",
   "viewportHeight": 660,
   "viewportWidth": 1000,
-  "ProductInstanceGroupId": 8,
   "downloadsFolder": "cypress/downloads",
   "ignoreTestFiles": ["*.js"],
   "testFiles": "**/*.feature",
